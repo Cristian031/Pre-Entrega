@@ -38,6 +38,13 @@ function iniciarGeneracionTabla() {
         let numero = parseInt(entrada)
         let tabla = generarTablaMultiplicar(numero)
         alert(`Tabla de multiplicar de ${numero}:\n\n${tabla}`)
+
+        let opcion = prompt("Quiere intentar con otro número? Y/N:")
+        if(opcion === 'Y' | opcion === 'y'){
+            iniciarGeneracionTabla()
+        }else{
+            iniciarSimulador()
+        }        
     } else {
         alert("Ingreso inválido. Por favor, ingrese un número válido.")
     }
