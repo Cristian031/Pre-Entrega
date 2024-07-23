@@ -1,77 +1,89 @@
-//Algoritmo con condional: Habilitación de edad
-function verificarEdad(edad) {
-    if (edad >= 18) {
-        return "¡Bienvenido a nuestro sitio!. Disfruta tu visita."
-    } else {
-        return "¡Acceso denegado!. Eres menor de edad no cumples con las normas de nuestro sitio."
-    }
+// Array de productos disponibles en la cafetería
+let menuCafeteria = [
+    { id: 1, nombre: "1- Cucha de polar grande 1.10mts * 1.00mts", precio: 25000 },
+    { id: 2, nombre: "2- Bolsa de alimento Eukanuba 20kg", precio: 55000 },
+    { id: 3, nombre: "3- Combo correa + pechera reforzada", precio: 20000 },
+    { id: 4, nombre: "4- Dentalife higiene canina", precio: 8500 }
+    
+]
+
+// Variables para manejar el estado del pedido
+let pedido = []
+
+// Función para obtener el elemento del DOM por ID de manera abreviada
+const getElement = id => document.getElementById(id)
+
+// Función para mostrar el menú de la cafetería
+function mostrarMenu() {
+    let menu = "Menú de Cafetería:\n\n"
+    menuCafeteria.forEach(producto => {
+        menu += `${producto.nombre} - $${producto.precio.toFixed(2)}\n`
+    })
+    return menu
 }
 
-// Función para generar la tabla de multiplicar de un número dado
-function generarTablaMultiplicar(numero) {
-    let tabla = ""
-    for (let i = 1; i <= 10; i++) {
-        tabla += `${numero} x ${i} = ${numero * i}\n`
-    }
-    return tabla
+// Función para generar el recibo del pedido
+function generarRecibo(pedido) {
+    let total = 0
+    let recibo = "Recibo del Pedido:\n\n"
+    pedido.forEach(item => {
+        let producto = menuCafeteria.find(prod => prod.nombre === item.nombre)
+        recibo += `${item.nombre} - $${producto.precio.toFixed(2)}\n`
+        total += producto.precio
+    });
+    recibo += `\nTotal: $${total.toFixed(2)}`
+    return recibo
 }
 
-// Función principal que interactúa con el usuario para verificar edad
-function iniciarVerificacionEdad() {
-    alert("Bienvenido al verificador de edad. Por favor, ingrese su edad para continuar.")
-    let entrada = prompt("Por favor, ingrese su edad:")
+// Función para realizar el pedido
+function realizarPedido() {
+    let continuar = true
 
-    if (entrada !== null && !isNaN(parseInt(entrada))) {
-        let edad = parseInt(entrada)
-        let mensaje = verificarEdad(edad)
-        alert(mensaje)
-    } else {
-        alert("Ingreso inválido. Por favor, ingrese un número válido para su edad.")
-    }
-}
-//--------------------------------------------------------------------------------------------
-// Función principal que interactúa con el usuario para generar tabla de multiplicar
-function iniciarGeneracionTabla() {
-    let entrada = prompt("Por favor, ingrese un número:")
+    while (continuar) {
+        let idProducto = prompt("Por favor, ingrese el ID del producto que desea (1, 2 o 3):");
+        if (idProducto) {
+            // Buscar cualquier producto que contenga la entrada del usuario (insensible a mayúsculas/minúsculas)
+            let encontrado = menuCafeteria.find(prod => prod.id === parseInt(idProducto))
 
-    if (entrada !== null && !isNaN(parseInt(entrada))) {   //Valida la entrada
-        let numero = parseInt(entrada)
-        let tabla = generarTablaMultiplicar(numero)
-        alert(`Tabla de multiplicar de ${numero}:\n\n${tabla}`)
-
-        let opcion = prompt("Quiere intentar con otro número? Y/N:")
-        if(opcion === 'Y' | opcion === 'y'){
-            iniciarGeneracionTabla()
-        }else{
-            iniciarSimulador()
-        }        
-    } else {
-        alert("Ingreso inválido. Por favor, ingrese un número válido.")
-    }
-}
-//--------------------------------------------------------------------------------------------
-
-// Función principal que interactúa con el usuario para el simulador interactivo
-function iniciarSimulador() {
-    let opcion = ""
-
-    while (opcion !== '3') {
-        opcion = prompt("Bienvenido al simulador interactivo. Elija una opción para continuar:\n\n1. Verificación de Edad\n2. Generación de Tabla de Multiplicar\n3. Salir")
-        switch (opcion) {
-            case '1':
-                iniciarVerificacionEdad()
-                break
-            case '2':
-                iniciarGeneracionTabla()
-                break
-            case '3':
-                alert("Gracias por usar el simulador interactivo. ¡Hasta luego!")
-                break
-            default:
-                alert("Opción inválida. Por favor, ingrese 1, 2 o 3 según la opción que desea ejecutar.")
-                break
+            if (encontrado) {
+                pedido.push({ nombre: encontrado.nombre })
+                let opcion = prompt("¿Desea agregar otro producto? Y/N:")
+                // Verificar que la opción ingresada sea válida (y/Y o n/N)
+                 while (opcion.toLowerCase() !== 'y' && opcion.toLowerCase() !== 'n') {
+                    alert("Respuesta no válida. Por favor, ingrese 'Y' para sí o 'N' para no.")
+                    opcion = prompt("¿Desea agregar otro producto? Y/N:")
+                }
+                if (opcion.toLowerCase() !== 'y') {
+                    continuar = false
+                }
+            } else {
+                alert("Producto no encontrado en el menú. Por favor, ingrese un producto válido.")
+            }
+        } else {
+            continuar = false
         }
     }
+
+    alert(generarRecibo(pedido))
 }
-// Llamada a la función principal
-iniciarSimulador()
+
+
+// Función principal que inicializa el simulador
+function iniciarSimulador() {
+    let verMenuBtn = getElement('verMenuBtn')
+    let realizarPedidoBtn = getElement('realizarPedidoBtn')
+
+    verMenuBtn.addEventListener('click', function() {
+        alert(mostrarMenu())
+    })
+
+    realizarPedidoBtn.addEventListener('click', function() {
+        pedido = [] // Reinicia el pedido cada vez que se realiza un nuevo pedido
+        realizarPedido()
+    })
+}
+
+// Llamada a la función principal para iniciar el simulador
+document.addEventListener('DOMContentLoaded', function() {
+    iniciarSimulador()
+})
