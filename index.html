@@ -3,17 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda Huellitas</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="descripcion" content="Descubre en Huellitas, tu petshop de confianza, una amplia variedad de productos para el cuidado y diversión de tu mascota. ¡Calidad y amor en cada compra!">
+    <meta name="author" content="Cristian Magallanes">
+    <meta name="keywords" content="mascotas, tienda de mascotas, productos para mascotas">
+    <meta name="copyright" content="© 2024 Huellitas Petshop">
+    <!--Opengraph-->
+    <meta property= "og:title" content="Huellitas">
+    <meta property="og:site_name" content="huellitaspetshop.com">
+    <meta property="og:url" content="www.huellitas.com">
+    <meta property="og:description" content="Calidad, precios y atención personalizada.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://elements-cover-images-0.imgix.net/0e947e72-2e49-4c64-80f4-29babf42f4a3?auto=compress%2Cformat&w=900&fit=max&s=2b9fe39f9e033e9ae76daf15c6388df5">
+    <title>Inicio | Huellitas</title>
+    <link href='https://fonts.googleapis.com/css?family=Life Savers' rel='stylesheet'>
+    <link   rel="stylesheet" href="./css/styles.css">
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon-16x16.png">
 </head>
 <body>
-    <div class="container">
-        <h1>Tienda Huellitas</h1>
-        <div class="buttons">
-            <button id="verMenuBtn">Ver Menú</button>
-            <button id="realizarPedidoBtn">Realizar Pedido</button>
+    <header class="header-index">
+        <div>
+            <a href="./index.html"><img src="./assets/logo.png" alt="Imagen del logo del negocio petshop"></a>
+        </div> 
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="./pages/catalogo.html">Productos</a>
+                <li><a href="./pages/iniciosesion.html">Iniciar Sesion</a>
+            </ul>
+        </nav>
+    </header>
+    <main  class="main-index">
+        <section  class="section-main-1">
+            <div>          
+                <h2><i>DALE LO MEJOR</i></h2>
+                <h4>al mejor precio</h4>
+                <div>
+                    <img src="./assets/logo.png" alt="Imagen del logo del negocio petshop">
+                    <p>HUELLITAS</p>
+                </div>
+            </div>
+            <div>
+                <img src="./assets/presentacion.jpg" alt="imagen de perro blanco corriendo">
+            </div>
+        </section>
+        <section class="section-consejos">
+            <h3><i>Consejos para el Bienestar de tus Mascotas</i></h3>
+            <div class="consejo">
+                <h4>Alimentación adecuada</h4>
+                <p>Es importante proporcionar a tu mascota una dieta equilibrada y nutritiva. Consulta con tu veterinario para determinar las necesidades alimenticias específicas de tu mascota y elige alimentos de alta calidad que se adapten a su edad, tamaño y nivel de actividad.</p>
+                <img src="./assets/alimentacion-consejo.jpg" alt="Gatito gris comiendo su alimento">
+            </div>
+            <div class="consejo">
+                <h4>Ejercicio regular</h4>
+                <p>Todas las mascotas necesitan ejercicio regular para mantenerse saludables y felices. Dedica tiempo cada día para jugar con tu mascota, sacarla a pasear o practicar actividades físicas que estimulen su mente y su cuerpo.</p>
+                <img src="./assets/ejercicio-consejo.jpg" alt="5 perros a punto de salir a pasear">
+            </div>
+            <div class="consejo">
+                <h4>Higiene y cuidado personal</h4>
+                <p>Mantén a tu mascota limpia y bien cuidada mediante el cepillado regular, el baño cuando sea necesario y el recorte de uñas. También es importante mantener al día las vacunas y las visitas al veterinario para detectar y prevenir problemas de salud.</p>
+                <img src="./assets/higiene-consejo.jpg" alt="Perro bull dog bañandose">
+            </div>
+        </section> 
+        <section class="section-main-2" >
+            <h3><i>RESEÑA</i></h3>
+            <div class="card-container">
+                <div class="card">
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                    <div class="comment">Excelente servicio, ¡los productos son geniales!</div>
+                </div>
+                <div class="card">
+                    <div class="rating">⭐⭐⭐</div>
+                    <div class="comment">Buenos productos, pero el tiempo de entrega fue un poco largo.</div>
+                </div>
+                <div class="card">
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                    <div class="comment">Excelente atención, encantada con los productos y la amabilidad del personal.</div>
+                </div>               
+            </div>
+        </section>
+        <section  class="section-main-3">
+            <h2><i>PRESENTACIÓN</i></h2>
+            <h5>¡BIENVENIDOS!</h5>
+            <p>En Huellitas, estamos comprometidos a brindar el mejor cuidado para tus mascotas.Tenemos todo lo que necesitas para mantener a tus amigos peludos felices y saludables.<br>
+            Explora nuestra selección y únete a nuestra comunidad de amantes de los animales.<br> ¡Gracias por elegirnos para cuidar de tus queridas mascotas!</p>
+        </section>
+        <section class="section-main-4" >
+            <h4>¡Completá tus datos y  recibí tu cupón de 15% OFF en tu primera compra!</h4>
+            <button type="button"> QUIERO MI CUPÓN</button>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-left">
+            <img src="./assets/logo.png" alt="Imagen del logo del negocio petshop">
+            <div>
+                <p>Huellitas</p>
+            </div>
+            <p>Información legal Política de privacidad<br>© 2024 All rights reserved.</p> 
         </div>
-    </div>
-    <script src="javaScript.js"></script>
+        <div class="footer-center">
+            <div class="ubicacion">
+                <img src="./assets/map-solid-24 - copia.png" alt="icono de ubicacion">
+                <p class="contacto-title"> Ubicación</p>
+                <p class="contacto-details">Ayacucho 173, Mendoza capital</p>
+            </div>
+            <div class="contacto">
+                <img src="./assets/contact-solid-24.png" alt="icono de contacto">
+                <p class="contacto-title"> Contacto</p>
+                <p class="contacto-details">ARG +54 9 2613568826</p>
+            </div>
+            <div class="correo">
+                <img src="./assets/envelope-solid-24.png" alt="icono de email">
+                <p class="contacto-title"> Email</p>
+                <p class="contacto-details">huellitas@gmail.com</p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <div class="footer-message">
+                <p>¡Regístrate en Huellitas y recibe ofertas especiales!</p>
+                <a href="./pages/iniciosesion.html">Haz clic aquí para registrarte</a>
+            </div>
+            <div class="icons">
+                <a href="https://www.facebook.com" target="_blank"><img src="./assets/facebook.png"alt="logo de facebook"></a>
+                <a href="https://api.whatsapp.com" target="_blank"><img src="./assets/whatsapp.png" alt="logo de whatsapp"></a>
+                <a href="https://www.instagram.com" target="_blank"><img src="./assets/instagram.png" alt="logo de instagram"></a>
+            </div>
+        </div>
+    </footer>  
 </body>
 </html>
