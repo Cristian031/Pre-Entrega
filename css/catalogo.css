@@ -1,4 +1,4 @@
-#productos-container {
+#productos-container,#carrito-container {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
