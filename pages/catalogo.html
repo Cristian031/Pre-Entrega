@@ -20,20 +20,66 @@
             </ul>
         </nav>
     </header>
+    <aside>
+        <nav class="menu">
+            <ul>
+                <li>
+                    <button id="todos" class="boton-categoria"> Todos los productos</button>
+                </li>
+                <li>
+                    <button id="perros" class="boton-categoria">Perros</button>
+                </li>
+                <li>
+                    <button id="gatos" class="boton-categoria">Gatos</button>
+                </li>
+                <li>
+                    <button id="accesorios" class="boton-categoria">Accesorios</button>
+                </li>
+            </ul>
+        </nav>
+    </aside>
     <main>
         <h1>Tienda Huellitas</h1>
-        <div class="button-productos">
-        <!--<button id="verMenuBtn">Ver Productos</button>-->
-        </div>
-        
         <div id="productos-container"></div>
-
     </main>
     <footer>
-
+        <div class="footer-left">
+            <img src="../assets/logo.png" alt="Imagen del logo del negocio petshop">
+            <div>
+                <p>Huellitas</p>
+            </div>
+            <p>Información legal Política de privacidad<br>© 2024 All rights reserved.</p> 
+        </div>
+        <div class="footer-center">
+            <div class="ubicacion">
+                <img src="../assets/map-solid-24 - copia.png" alt="icono de ubicacion">
+                <p class="contacto-title"> Ubicación</p>
+                <p class="contacto-details">Ayacucho 173, Mendoza capital</p>
+            </div>
+            <div class="contacto">
+                <img src="../assets/contact-solid-24.png" alt="icono de contacto">
+                <p class="contacto-title"> Contacto</p>
+                <p class="contacto-details">ARG +54 9 2613568826</p>
+            </div>
+            <div class="correo">
+                <img src="../assets/envelope-solid-24.png" alt="icono de email">
+                <p class="contacto-title"> Email</p>
+                <p class="contacto-details">huellitas@gmail.com</p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <div class="footer-message">
+                <p>Tu satisfacción es nuestra prioridad, ¡disfruta de tu compra!</p>
+                <a href="./pages/catalogo.html">Realizar compra</a>
+            </div>
+            <div class="icons">
+                <a href="https://www.facebook.com" target="_blank"><img src="../assets/facebook.png"alt="logo de facebook"></a>
+                <a href="https://api.whatsapp.com" target="_blank"><img src="../assets/whatsapp.png" alt="logo de whatsapp"></a>
+                <a href="https://www.instagram.com" target="_blank"><img src="../assets/instagram.png" alt="logo de instagram"></a>
+            </div>
+        </div>
     </footer>
-    
-    <script src="../js/articulos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>  
     <script src="../js/catalogo.js"></script>
     <script src="../js/carritoService.js"></script>
 </body>

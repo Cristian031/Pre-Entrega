@@ -1,77 +1,89 @@
-#productos-container{
+#productos-container {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
     margin: 50px 0px 50px 0px;
-
 }
-.tarjeta-producto{
+
+.tarjeta-producto {
     width: 300px;
     text-align: center;
     background-color: #fee3ec;
     padding: 10px;
-    text-align: center;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     transition: 200ms;
 }
-.tarjeta-producto:hover{
+
+.tarjeta-producto:hover {
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
     translate: 0px -5px;
-  }
-  
-.tarjeta-producto img{
-    max-width:70px;
-    aspect-ratio: 1.5;
+}
 
+.tarjeta-producto img {
+    width: 30%; /* Ajusta el ancho de la imagen */
+    height: 150px; /* Fija la altura de las imágenes */
+    object-fit: cover; /* Mantiene la proporción y recorta la imagen */
+    border-radius: 4px; /* Bordes redondeados, opcional */
 }
-.tarjeta-producto h3{
+
+.tarjeta-producto h3 {
     font-size: 18px;
     margin: 5px;
 }
-.tarjeta-producto p{
+
+.tarjeta-producto p {
     font-size: 18px;
     margin: 5px;
 }
-.tarjeta-producto h5{
+
+.tarjeta-producto h5 {
     font-size: 12px;
     margin: 5px;
 }
 
-.tarjeta-producto button{
+.tarjeta-producto button {
     font-size: larger;
     background-color: #66BFBF;
     border-radius: 5px;
     padding: 5px 10px;
     color: white;
-    border:unset;
-    cursor:pointer;
+    border: unset;
+    cursor: pointer;
 }
+
 button:hover {
     background-color: #FF0063;
 }
-  
+
 h1 {
     padding: 10px;
     text-align: center;
     color: #333;
     font-size: 45px;
 }
-#verMenuBtn{
-    margin-left: 20px;
+nav ul{
+    display: flex;
+    list-style-type: none;
+    margin: 10px;
+}
+#todos , #perros, #gatos, #accesorios, #comprar, #reiniciar{
+    margin: 5px;
     font-size: larger;
     background-color: #66BFBF;
     border-radius: 5px;
-    padding: 5px 10px;
+    padding: 3px 5px;
     color: white;
-    border:unset;
     cursor:pointer;
+    font-size: 20px;
 }
-#verMenuBtn:hover{
+#todos:hover , #perros:hover, #gatos:hover, #accesorios:hover{
+    border: 2px solid #FF0063;
+}
+#comprar:hover, #reiniciar:hover{
     background-color: #FF0063;
 }
-
 #totales, #carrito-vacio{
     text-align: center;
 }
@@ -79,7 +91,6 @@ h1 {
 .escondido{
     display: none;
 }
-
 
 #carrito-container{
     display: flex;
@@ -96,3 +107,4 @@ h1 {
 #carrito-vacio{
     text-align: center;
 }
+

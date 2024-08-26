@@ -1,0 +1,161 @@
+[
+    {
+        "id": 1,
+        "nombre": "Alimento Ken-L 15kg",
+        "descripcion": "Alimento para perro adulto",
+        "stock": 4 ,
+        "precio": 35000, 
+        "rutaImagen": "alimento1.png",
+        "categoria":{
+            "nombre": "Perros",
+            "id": "perros"
+        }
+    },
+
+    {
+        "id": 2,
+        "nombre": "Alimento DogChow 15kg",
+        "descripcion": "Alimento para perro adulto",
+        "stock": 4 ,
+        "precio": 25000, 
+        "rutaImagen": "Dog-Chow.png",
+        "categoria":{
+            "nombre": "Perros",
+            "id": "perros"
+        }
+    },
+    
+    {
+        "id": 3,
+        "nombre": "Alimento Dog Selection 15kg",
+        "descripcion": "Alimento para perro adulto",
+        "stock": 4 ,
+        "precio": 27000, 
+        "rutaImagen": "dogselection.png",
+        "categoria":{
+            "nombre": "Perros",
+            "id": "perros"
+        }
+    },
+
+    {
+        "id": 4,
+        "nombre": "Alimento Excellent 15kg",
+        "descripcion": "Alimento para perro adulto",
+        "stock": 4 ,
+        "precio": 45000, 
+        "rutaImagen": "Excellent-alimento.jpg",
+        "categoria":{
+            "nombre": "Perros",
+            "id": "perros"
+        }
+    },
+    {
+        "id": 5,
+        "nombre": "Alimento Nutribon 15kg",
+        "descripcion": "Alimento para perro adulto mix de sabores",
+        "stock": 10 ,
+        "precio": 38000, 
+        "rutaImagen": "nutribon.png",
+        "categoria":{
+            "nombre": "Perros",
+            "id": "perros"
+        }
+    },
+    {
+        "id": 6,
+        "nombre": "Alimento Dogui Carne 20kg",
+        "descripcion": "Alimento para perro adulto mix de sabores",
+        "stock": 10 ,
+        "precio": 24000, 
+        "rutaImagen": "dogui-carne.png",
+        "categoria":{
+            "nombre": "Perros",
+            "id": "perros"
+        }
+    },
+    {
+        "id": 7,
+        "nombre": "Alimento Pedrigree 15kg",
+        "descripcion": "Alimento para razas pequeñas sabor carne y vegetales",
+        "stock": 10 ,
+        "precio": 28000, 
+        "rutaImagen": "pedigree.png",
+        "categoria":{
+            "nombre": "Perros",
+            "id": "perros"
+        }
+    },
+    {
+        "id": 8,
+        "nombre": "Alimento CatPro 15kg",
+        "descripcion": "Alimento para gato adulto",
+        "stock": 4 ,
+        "precio": 30000, 
+        "rutaImagen": "catPro.jpg",
+        "categoria":{
+            "nombre": "Gatos",
+            "id": "gatos"
+        }
+    },
+    {
+        "id": 9,
+        "nombre": "Alimento Excellent 15kg",
+        "descripcion": "Alimento para gato adulto",
+        "stock": 4 ,
+        "precio": 54000, 
+        "rutaImagen": "excellentGato.jpg",
+        "categoria":{
+            "nombre": "Gatos",
+            "id": "gatos"
+        }
+    },
+    {
+        "id": 10,
+        "nombre": "Cucha de polar premium",
+        "descripcion": "cucha 60cm*70cm",
+        "stock": 4 ,
+        "precio": 22000, 
+        "rutaImagen": "a-descansar.jpg",
+        "categoria":{
+            "nombre": "Accesorios",
+            "id": "accesorios"
+        }
+    },
+    {
+        "id": 11,
+        "nombre": "Casa para gato",
+        "descripcion": "Escalador para gato 120cm*50cm",
+        "stock": 4 ,
+        "precio": 45000, 
+        "rutaImagen": "casa-gato.jpg",
+        "categoria":{
+            "nombre": "Accesorios",
+            "id": "accesorios"
+        }
+    },
+    {
+        "id": 12,
+        "nombre": "Comedero premium yellow",
+        "descripcion": "comedero grande amarrillo",
+        "stock": 4 ,
+        "precio": 8000, 
+        "rutaImagen": "Comedero.jpg",
+        "categoria":{
+            "nombre": "Accesorios",
+            "id": "accesorios"
+        }
+    },
+    {
+        "id": 13,
+        "nombre": "Correa de paseo regulable",
+        "descripcion": "correa huesitos para mascota pequeña ",
+        "stock": 5 ,
+        "precio": 12000, 
+        "rutaImagen": "correa.jpg",
+        "categoria":{
+            "nombre": "Accesorios",
+            "id": "accesorios"
+        }
+    }
+]
