@@ -148,7 +148,7 @@ document.getElementById("comprar").addEventListener("click", function() {
             const tipoEntrega = document.getElementById('tipoEntrega').value;
             const observacion = document.getElementById('observacion').value; // Captura la observación
 
-            if (!nombre || !direccion || !medioPago || !tipoEntrega) {
+            if (!nombre || !medioPago || !tipoEntrega || (tipoEntrega === 'domicilio' && !direccion)) {
                 Swal.showValidationMessage('Por favor completa todos los campos');
             }
             return { nombre, direccion, medioPago, tipoEntrega, observacion }; // Asegúrate de devolver también la observación
